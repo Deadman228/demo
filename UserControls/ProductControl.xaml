@@ -1,0 +1,24 @@
+﻿<UserControl x:Class="Test.UserControls.ProductControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Test.UserControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="150" Width="auto">
+    <Grid x:Name="data">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Image x:Name="Img" Height="80" Margin="20" Source="/Resources/picture.png"/>
+        <StackPanel Grid.Column="1" Margin="5">
+            <TextBlock Text="{Binding ProductName}"/>
+            <TextBlock Text="{Binding ProductDescription}"/>
+            <TextBlock x:Name="TbManufac"/>
+            <TextBlock Text="{Binding ProductCost}"/>
+        </StackPanel>
+        <TextBlock Grid.Column="2" Text="{Binding ProductQuantityInStock}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+    </Grid>
+</UserControl>
